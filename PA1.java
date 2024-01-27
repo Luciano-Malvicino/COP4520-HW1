@@ -19,7 +19,7 @@ public class PA1 {
 
     for (int p = 2; p * p <= end; p++) {
       for (int i = Math.max(p * p, (start + p - 1) / p * p); i <= end; i += p) {
-          primeArray[i - start] = false;
+        primeArray[i - start] = false;
       }
     }
 
@@ -48,7 +48,8 @@ public class PA1 {
       thread.start();
       try {
         thread.join();
-      } catch (Exception e) {
+      }
+      catch (Exception e) {
         System.out.println(e);
       }
     }
@@ -58,7 +59,8 @@ public class PA1 {
       for (int prime : primes) {
         File.write(prime + " ");
       }
-    } catch (Exception e) {
+    }
+    catch (Exception e) {
       System.out.println(e);
     }
   }
